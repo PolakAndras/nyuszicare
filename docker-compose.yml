@@ -1,0 +1,36 @@
+# Indítás: docker compose up  ->  http://localhost:8080
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      DB_HOST: db
+      DB_USER: nyuszicare
+      DB_PASSWORD: nyuszicare
+      DB_NAME: nyuszicare
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: nyuszicare
+      MYSQL_USER: nyuszicare
+      MYSQL_PASSWORD: nyuszicare
+      MYSQL_ROOT_PASSWORD: root
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      # Az első indításkor automatikusan betölti a táblákat és a mintaadatokat
+      - ./database/nyuszicare.sql:/docker-entrypoint-initdb.d/01-nyuszicare.sql:ro
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-proot"]
+      interval: 5s
+      retries: 20
+
+volumes:
+  db_data:

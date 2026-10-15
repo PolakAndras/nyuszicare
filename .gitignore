@@ -1,0 +1,9 @@
+# Helyi beállítások, jelszavak
+includes/db_config.local.php
+.env
+
+# Szerkesztők, operációs rendszer
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

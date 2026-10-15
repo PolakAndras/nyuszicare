@@ -1,0 +1,5 @@
+.git
+.github
+docs
+*.md
+includes/db_config.local.php
