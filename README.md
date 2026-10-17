@@ -7,6 +7,8 @@
 
 A **NyusziCare** egy PHP-ban, keretrendszer nélkül írt webalkalmazás, ahol nyúltartással, etetéssel és a nyulak betegségeivel kapcsolatos cikkek olvashatók. A látogatók a nyúltartási cikkeket szabadon böngészhetik, a többi kategóriához regisztráció szükséges. Az adminisztrátor egy külön felületen kezeli a cikkeket.
 
+**🔗 Élő demó: <https://nyuszicare.infinityfreeapp.com/>** (a belépési adatokat lásd lent, a [Demó fiókok](#demó-fiókok) résznél)
+
 ![Főoldal](docs/screenshots/fooldal.png)
 
 ## Funkciók
@@ -80,7 +82,7 @@ Ezután az oldal elérhető itt: <http://localhost:8080>. Az adatbázis és a mi
 | Felhasználó | `demo@nyuszicare.hu` | `Demo1234` |
 | Admin | `admin@nyuszicare.hu` | `Admin1234` |
 
-Az admin ugyanazon a belépési oldalon jelentkezik be, és utána az admin felületre kerül.
+Az admin ugyanazon a belépési oldalon jelentkezik be, és utána az admin felületre kerül. Az élő demón az admin felület csak olvasható, a cikkek ott nem módosíthatók.
 
 ## Projekt felépítése
 
