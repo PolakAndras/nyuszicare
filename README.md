@@ -114,4 +114,4 @@ Az admin ugyanazon a belépési oldalon jelentkezik be, és utána az admin fel�
 
 ---
 
-Készítette: **Polák András**
+
